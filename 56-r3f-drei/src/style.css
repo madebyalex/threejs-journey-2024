@@ -9,3 +9,13 @@ body,
     height: 100%;
     background: ivory;
 }
+
+.note > div {
+    background-color: hsla(210, 10%, 8%, 0.8);
+    color: #FFFFFF;
+    padding: .4em .6em;
+    line-height: 1;
+    border-radius: 4px;
+    font-family: sans-serif;
+    white-space: nowrap;
+}
