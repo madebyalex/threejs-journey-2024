@@ -1,5 +1,8 @@
 import { useRef } from 'react';
 import {
+  MeshReflectorMaterial,
+  Float,
+  Text,
   Html,
   PivotControls,
   OrbitControls,
@@ -48,8 +51,27 @@ export default function Experience() {
 
       <mesh position-y={-1} rotation-x={-Math.PI * 0.5} scale={10}>
         <planeGeometry />
-        <meshStandardMaterial color="greenyellow" />
+        {/* <meshStandardMaterial color="greenyellow" /> */}
+        <MeshReflectorMaterial
+          resolution={512}
+          blur={1000}
+          mixBlur={1}
+          mirror={0.8}
+          color={'grey'}
+        />
       </mesh>
+
+      <Float speed={2} floatIntensity={5}>
+        <Text
+          font="./bangers-v20-latin-regular.woff"
+          rotation={[0, -45, 0]}
+          position-y={2}
+          textAlign="center"
+        >
+          I LOVE R3F
+          <meshNormalMaterial />
+        </Text>
+      </Float>
     </>
   );
 }
